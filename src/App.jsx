@@ -4,6 +4,7 @@ import { faMugSaucer } from '@fortawesome/free-solid-svg-icons';
 import Feedback from './components/Feedback/Feedback.jsx';
 import Options from './components/Options/Options.jsx';
 import Notification from './components/Notification/Notification.jsx';
+import Description from './components/Description/Description.jsx';
 import styles from './App.module.css';
 
 const App = () => {
@@ -36,7 +37,7 @@ const App = () => {
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <h1>Sip Happens Café</h1>
-        <p>Please leave your feedback about our service by selecting one of the options below.</p>
+        <Description />
         <Options updateFeedback={updateFeedback} resetFeedback={resetFeedback} totalFeedback={totalFeedback} />
         {totalFeedback > 0 ? (
           <Feedback feedback={feedback} totalFeedback={totalFeedback} positiveFeedback={positiveFeedback} />
